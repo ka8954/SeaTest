@@ -58,7 +58,7 @@ def main():
             'This System Allocates Seating for Students belonging to Cloud Computing, Cyber Security, IT, IOT, Networking Specializations')
         slt.write('# Type Of Exam')
         radio_btr = slt.selectbox(' ',
-                                  options=("Choose an One", "Internals", "University Theory"))
+                                  options=("Choose an One", "Internals", "University Practical", "University Theory"))
         slt.write('# Enter the Details')
         id = slt.text_input('USER ID', max_chars=15)
         UNAME = slt.text_input('USERNAME', max_chars=6)
@@ -80,18 +80,26 @@ def main():
         print(exam_date)
 
         if slt.button("SUBMIT"):
-            d1 = supabase.table("seat").insert({"ID": id, "Username": UNAME, "Password": PWORD, "Sysno": seat, "Setno": Setno}).execute()
-            assert len(d1.data) > 0
-            slt.success("Data Saved")
-            co1, co2 = slt.columns(2)
-            co3, co4 = slt.columns(2)
-            co5, co6 = slt.columns(2)
-            co1.info('Seat No ')
-            co2.success(seat)
-            co3.info('Set No ')
-            co4.success(Setno)
-            co5.info('Date Of Exam ')
-            co6.success(exam_date)
+            
+            if id:
+                if UNAME:
+                    if PWORD:
+                        d1 = supabase.table("seat").insert(
+                            {"ID": id, "Username": UNAME, "Password": PWORD, "Sysno": seat, "Setno": Setno}).execute()
+                        assert len(d1.data) > 0
+                        slt.success("Data Saved")
+                        co1, co2 = slt.columns(2)
+                        co3, co4 = slt.columns(2)
+                        co5, co6 = slt.columns(2)
+                        co1.info('Seat No ')
+                        co2.success(seat)
+                        co3.info('Set No ')
+                        co4.success(Setno)
+                        co5.info('Date Of Exam ')
+                        co6.success(exam_date)
+            else:
+                slt.error("Empty Values Not Accepted")
+
 
     if options == 'Entry':
         entry()
