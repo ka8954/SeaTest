@@ -81,7 +81,7 @@ def main():
 
         if slt.button("SUBMIT"):
 
-            if (id is not None) and (UNAME is not None) and (PWORD is not None):
+            if (id!='NULL') and (UNAME!='NULL') and (PWORD!='NULL'):
                 d1 = supabase.table("seat").insert({"ID": id, "Username": UNAME, "Password": PWORD, "Sysno": seat, "Setno": Setno}).execute()
                 assert len(d1.data) > 0
                 slt.success("Data Saved")
