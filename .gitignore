@@ -1,1 +1,4 @@
-
+host='localhost'
+user='root'
+password='dbmsproject'
+database='new_schema'
