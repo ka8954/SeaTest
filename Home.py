@@ -80,8 +80,9 @@ def main():
         print(exam_date)
 
         if slt.button("SUBMIT"):
-
-            if (id!='NULL') and (UNAME!='NULL') and (PWORD!='NULL'):
+            if (not id) and (not UNAME) and (not PWORD):
+                slt.error("Empty Values Not Accepted")
+            else:
                 d1 = supabase.table("seat").insert({"ID": id, "Username": UNAME, "Password": PWORD, "Sysno": seat, "Setno": Setno}).execute()
                 assert len(d1.data) > 0
                 slt.success("Data Saved")
@@ -94,9 +95,7 @@ def main():
                 co4.success(Setno)
                 co5.info('Date Of Exam ')
                 co6.success(exam_date)
-                        
-            else:
-                slt.error("Empty Values Not Accepted")
+
 
 
     if options == 'Entry':
