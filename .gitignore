@@ -1,7 +1,2 @@
-[connections.mysql]
-dialect = "mysql"
-host = "localhost"
-port = 3306
-database = "new_schema"
-username = "root"
-password = "dbmsproject"
+supabase_url = "https://wmjfzfxkxzvptpapbqev.supabase.co"
+supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndtamZ6ZnhreHp2cHRwYXBicWV2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODc5MjM0NjQsImV4cCI6MjAwMzQ5OTQ2NH0.zvC5MjptDlgL-6jyCe_B6uFPsyCG2X32nfXD-j0wZOI"
