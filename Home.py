@@ -21,7 +21,7 @@ def main():
         print("Option Selected")
 
     def retreive():
-        col1, col2, col3 = slt.columns([4.2, 9, 2])
+        col1, col2, col3 = slt.columns([4.1, 9, 2])
 
         with col1:
             slt.write("")
