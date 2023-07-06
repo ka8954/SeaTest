@@ -28,7 +28,7 @@ def main():
 
         with col2:
             slt.image("srm.jpg", width=300)
-            slt.image("seatest.png",width=300)
+            slt.image("seatest.png",width=250)
             slt.write('Developed By Kaarthik Sai Charan Ayineni')
 
         with col3:
@@ -48,7 +48,7 @@ def main():
 
         with col2:
             slt.image("srm.jpg", width=300)
-            slt.image("seatest.png",width=300)
+            slt.image("seatest.png",width=250)
             slt.write('Developed By Kaarthik Sai Charan Ayineni')
 
         with col3:
