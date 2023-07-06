@@ -27,7 +27,6 @@ def main():
             slt.write("")
 
         with col2:
-            slt.image("seatest.png",width=200)
             slt.image("srm.jpg", width=300)
             slt.write('Developed By Kaarthik Sai Charan Ayineni')
 
@@ -47,7 +46,6 @@ def main():
             slt.write("")
 
         with col2:
-            slt.image("seatest.png",width=50)
             slt.image("srm.jpg", width=300)
             slt.write('Developed By Kaarthik Sai Charan Ayineni')
 
