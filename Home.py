@@ -85,7 +85,7 @@ def main():
                 assert len(d1.data) > 0
                 slt.success("Data Saved")
             else:
-                d1 = supabase.table("seat").insert({"ID": id, "Username": UNAME, "Password": PWORD, "Sysno": 0, "Setno": "EMPTY"}).execute()
+                d1 = supabase.table("seat").insert({"ID": id, "Username": UNAME, "Password": PWORD, "Sysno": 0, "Setno": "NULL"}).execute()
                 assert len(d1.data) > 0
 
     if options == 'Entry':
