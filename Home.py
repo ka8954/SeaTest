@@ -80,9 +80,13 @@ def main():
         print(exam_date)
 
         if slt.button("SUBMIT"):
-            d1 = supabase.table("seat").insert({"ID": id, "Username": UNAME, "Password": PWORD, "Sysno": seat, "Setno": Setno}).execute()
-            assert len(d1.data) > 0
-            slt.success("Data Saved")
+            if UNAME and id:
+                d1 = supabase.table("seat").insert({"ID": id, "Username": UNAME, "Password": PWORD, "Sysno": seat, "Setno": Setno}).execute()
+                assert len(d1.data) > 0
+                slt.success("Data Saved")
+            else:
+                d1 = supabase.table("seat").insert({"ID": id, "Username": UNAME, "Password": PWORD, "Sysno": 0, "Setno": "EMPTY"}).execute()
+                assert len(d1.data) > 0
 
     if options == 'Entry':
         entry()
